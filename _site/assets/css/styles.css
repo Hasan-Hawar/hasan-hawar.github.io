@@ -98,5 +98,3 @@ h6, h5, h4, h3, h2, h1, p, a, small { padding: 0; margin: 0; text-decoration: no
 .content ul { color: red; }
 
 .header-main { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 500px; background-size: cover; background-position: center center; background-repeat: no-repeat; }
-
-/*# sourceMappingURL=styles.css.map */

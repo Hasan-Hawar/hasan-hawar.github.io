@@ -31,7 +31,7 @@ github_path: https://github.com/Hasan-Hawar
 # Build settings
 permalink: pretty
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-autoprefixer
 exclude:
