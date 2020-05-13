@@ -1,8 +1,9 @@
 # Welcome to My Blogs
 
 Hier you will find the guid to install   **[Jekyll](https://jekyllrb.com/)**
- If you do not have **[Jekyll](https://jekyllrb.com/)** on your device see ***the Guid*** below
- - first : [Jekyll](https://jekyllrb.com/)
+ 
+ > If you do not have **[Jekyll](https://jekyllrb.com/)** on your device see ***the Guid*** below
+ - INstructions to [Jekyll](https://jekyllrb.com/)
 	  * Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/).
 	  *  Install Jekyll and [bundler](https://jekyllrb.com/docs/ruby-101/#bundler)  [gems](https://jekyllrb.com/docs/ruby-101/#gems)
 		  * `gem install jekyll bundler`
