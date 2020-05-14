@@ -2,3 +2,10 @@
 @import "0-base/dir-base";
 @import "1-modules/dir-modules";
 @import "2-layouts/dir-layouts";
+#bg-img{
+   @include background;
+   overflow: hidden; 
+}
+main{
+  
+}
