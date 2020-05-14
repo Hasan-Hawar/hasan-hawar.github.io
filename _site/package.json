@@ -1,0 +1,19 @@
+{
+  "name": "personal_portfolio",
+  "version": "1.0.0",
+  "description": "Blogs & Portfoilio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar.git"
+  },
+  "author": "Hasan Hawar",
+  "license": "HHA",
+  "bugs": {
+    "url": "https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar/issues"
+  },
+  "homepage": "https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar#readme"
+}

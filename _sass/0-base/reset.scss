@@ -1,18 +1,24 @@
 *{
     box-sizing: border-box;
+    color: $c-creme-white;
   }
   body{
     margin: 0px;
     padding: 0px;
     font-family: $font-base;
-    font-size: $font-size;
-    font-weight: 400;
+    @include font-base;
+    background-color: $c-light-black;
+   
   }
-  h6, h5, h4, h3, h2, h1, p, a, small{
+  a{
+    text-decoration: none;
+  }
+  ul li{
+    list-style: none;
+  }
+  h6, h5, h4, h3, h2, h1, p,small{
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
   }
   .hide{
     display: none;
