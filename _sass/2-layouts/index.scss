@@ -1,17 +1,16 @@
-.proj-header{
- position: fixed;
- top: 0;
- z-index: 999;
- pointer-events: none;
-}
+
 .content{
     .home-title{
         margin-top: 20vh;
+        
     }
 }
-.proj-nav{
-    pointer-events: all;
-}
+.brand-heading{
+    color: $c-creme-white;
+ }
+ .brand-describ{
+    color: $c-creme-white;
+ }
 .icons{
     margin-top: $gutter;
 }
@@ -19,9 +18,20 @@
     i{
         padding-right: $gutter;
         &:hover{
-        color: $secondary-color;
-        @include ease-out ;
-    }
+            transition: color .3s ease-out;
+        }
+        &.fa-facebook:hover{
+        color: $c-facebook;
+        }
+        &.fa-linkedin:hover{
+        color: $c-twitter;
+        }
+        &.fa-twitter:hover{
+        color: $c-linkedin;
+        }
+        &.fa-github:hover{
+        color: $c-black;
+        }
     }
 }
 
@@ -36,5 +46,8 @@
 
 .under-construction{
     margin: 50px;
-    color:  #666666;
+    font-size: 70px;
+    color: $secondary-color;
+    text-align: center;
+    text-decoration: underline;
 }

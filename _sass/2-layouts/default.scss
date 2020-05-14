@@ -1,0 +1,32 @@
+#bg-img{
+    @include background;
+   
+ }
+ .proj-header{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    color: $c-creme-white;
+ }
+ .menu-btn{
+    position: absolute;
+    z-index: 3;
+    right: $gutter;
+    top: $gutter;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    pointer-events: all;
+ 
+    .btn-line{
+        width: 28px;
+        height: 3px;
+        margin: 0;
+        margin-bottom: 5px;
+        background-color: $c-creme-white;;
+        transition: all .4s ease-out;
+    }
+ }  
+ main{
+ }
