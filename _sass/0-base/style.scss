@@ -37,10 +37,6 @@ $home-img: url(../img/home_sec.jpg);
     }
 }
 
-@mixin  ease-out {
-    transition: color .4s ease-out;
-}
-
 @mixin background {
     @if $show-home-img {
         &#bg-img{
@@ -55,7 +51,7 @@ $home-img: url(../img/home_sec.jpg);
                 width: 100%;
                 height: 100%;
                 background:rgba($c-light-black, .6) ;
-                z-index: -999;
+                z-index: -1;
             }
         }
     }
