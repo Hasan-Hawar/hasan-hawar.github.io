@@ -1,5 +1,6 @@
 
 .content{
+    @include l-sitewidth;
     .home-title{
         margin-top: 20vh;
         
@@ -35,10 +36,6 @@
         color: $c-black;
         }
     }
-}
-
-#home-page{
-    @include l-sitewidth;
 }
 
 .secondary-text{
