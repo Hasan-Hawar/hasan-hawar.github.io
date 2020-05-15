@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap');
+$font-base: "Oswald", Arial, sans-serif;
+$font-text: "Anton", Arial, sans-serif;
+$font-size: 14px;
+
+
+@mixin font-l {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+@mixin font-m {
+    font-size: 40px;
+    line-height: 1.3;
+}
+@mixin font-s{
+    font-size: 26px;
+    line-height: 1.2;
+}
+@mixin font-base{
+    font-size: $font-base;
+    line-height: 1.2;
+}
