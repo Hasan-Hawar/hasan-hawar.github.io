@@ -1,5 +1,12 @@
-<ul>
+
+<nav class="menu">
+<div class="menu-branding">
+    <div class="portrait"></div>
+</div>
+
+<ul class="menu-nav">
     {% for item in site.data.navigation.links %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    <li class="menu-nav-item"><a href="{{ item.url }}" class="nav-link" >{{ item.title }}</a></li>
     {% endfor %}
 </ul>
+</nav>

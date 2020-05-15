@@ -1,4 +1,84 @@
-.menu-nav{
-    pointer-events: all;
-    display: flex;
-}
+
+ // menu overlay
+
+ .menu{
+     position: absolute;
+     top: 0;
+     width: 100%;
+     opacity: 0.8;
+     visibility: hidden;
+     pointer-events: all;
+     &.show{
+         visibility: visible; ;
+     }
+
+     &-branding, &-nav{
+        pointer-events: all;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+     }
+
+     &-nav{
+         background-color: darken($c-light-black,5);
+         transform: translate3d(0, -100%, 0);
+        @include transition-all;
+         &.show{
+             // slide from top
+             transform: translate3d(0,0,0);
+         }
+     }
+     // branding side
+     &-branding{
+         background-color: $c-light-black;
+         transform: translate3d(0, 100%, 0);
+         @include transition-all;
+         &.show{
+            // slide from bottom
+            transform: translate3d(0,0,0);
+        }
+        .portrait{
+            width: 250px;
+            height: 250px;
+            background: $portrait-img;
+            background-size: cover;
+            border-radius: 50%;
+        }
+     }
+     .menu-nav-item{
+         transform: translate3d(800px, 0 , 0);
+         @include transition-all;
+         &.show{
+             transform: translate3d(0,0,0);
+         }
+         &:last-child{
+            .nav-link{
+                padding-bottom: 0;
+            }
+         }
+
+     }
+     .nav-link{
+         @include font-s;
+         display: inline-block;
+         position: relative;
+         padding-bottom: $gutter;
+         text-transform: uppercase;
+         color: $c-creme-white;
+         transition: color .4s ease-out;
+         &:hover{
+             color: $c-secondary-color;
+         }
+     }
+ }
+
+ @for $x from 1 through 4{
+    .menu-nav-item:nth-child(#{$x}){
+         transition-delay: $x * 0.1s;
+     }
+ } 
