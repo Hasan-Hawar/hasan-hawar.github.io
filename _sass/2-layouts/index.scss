@@ -6,9 +6,11 @@
     }
 }
 .brand-heading{
+    @include font-l;
     color: $c-creme-white;
  }
  .brand-describ{
+     @include font-s;
     color: $c-creme-white;
  }
 .icons{
@@ -40,14 +42,14 @@
 }
 
 .secondary-text{
-    color: $secondary-color;
+    color: $c-secondary-color;
     
 }
 
 .under-construction{
     margin: 50px;
     font-size: 70px;
-    color: $secondary-color;
+    color: $c-secondary-color;
     text-align: center;
     text-decoration: underline;
 }
