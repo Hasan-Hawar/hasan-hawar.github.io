@@ -6,6 +6,32 @@
         
     }
 }
+#home-page{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.personal-part{
+  max-width: 50%;
+}
+.aboutme-part{
+@include font-s;
+max-width: 50%;
+margin-top: auto;
+.describtion{
+margin-bottom: $gutter;
+}
+.my-cv{
+
+}
+}
+.img-portrait{
+    max-width: 200px;
+}
+.main-img{
+    width: 80%;
+    border-radius: 50%;
+}
 .brand-heading{
     @include font-l;
     color: $c-creme-white;
@@ -45,7 +71,7 @@
 
 .under-construction{
     margin: 50px;
-    font-size: 70px;
+    @include font-m;
     color: $c-secondary-color;
     text-align: center;
     text-decoration: underline;

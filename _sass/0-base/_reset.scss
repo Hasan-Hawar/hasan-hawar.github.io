@@ -5,9 +5,8 @@
     color: $c-white;
   }
   body{
-
-    font-family: $font-base;
     @include font-base;
+    font-family: $font-family-base;
     background-color: $c-light-black;
    
   }

@@ -5,7 +5,7 @@
      position: absolute;
      top: 0;
      width: 100%;
-     opacity: 0.8;
+     opacity: 0.9;
      visibility: hidden;
      pointer-events: all;
      &.show{
@@ -61,10 +61,13 @@
                 padding-bottom: 0;
             }
          }
+         &.current > a{
+             color: $c-secondary-color;
+         }
 
      }
      .nav-link{
-         @include font-s;
+         @include font-m;
          display: inline-block;
          position: relative;
          padding-bottom: $gutter;

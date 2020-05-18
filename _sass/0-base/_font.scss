@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap');
-$font-base: "Oswald", Arial, sans-serif;
+$font-family-base: "Oswald", Arial, sans-serif;
 $font-text: "Anton", Arial, sans-serif;
 $font-size: 14px;
 
@@ -19,6 +19,6 @@ $font-size: 14px;
     line-height: 1.2;
 }
 @mixin font-base{
-    font-size: $font-base;
+    font-size: $font-size;
     line-height: 1.2;
 }

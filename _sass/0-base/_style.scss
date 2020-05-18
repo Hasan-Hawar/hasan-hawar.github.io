@@ -31,7 +31,7 @@ $portrait-img: url('../img/portrait.png');
                 right: 0;
                 width: 100%;
                 height: 100%;
-                background:rgba($c-light-black, .6) ;
+                background:rgba($c-light-black, .4) ;
                 z-index: -1;
             }
         }
@@ -41,3 +41,27 @@ $portrait-img: url('../img/portrait.png');
 @mixin transition-all{
     transition: all .4s ease-out;
 }
+
+// media query mixins
+@mixin  mq-Desktop {
+    @media screen and (min-width: 1171px){
+        @content;
+    }
+}
+@mixin  mq-aboveTablet {
+    @media screen and (min-width: 769px) and (max-width: 750px){
+        @content;
+    }
+}
+@mixin  mq-Tablet {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin  mq-Mobile {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+
