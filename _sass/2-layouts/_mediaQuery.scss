@@ -28,6 +28,16 @@
             }
         }
     }
+    .home-section{
+        flex-direction: column;
+        .personal-part{
+            margin-bottom: $gutter;
+            width: 100%;
+        }
+        .aboutme-part{
+            width: 100%;
+        }
+    }
     .menu-branding, .menu-nav{
         float: none;
         width: 100%;

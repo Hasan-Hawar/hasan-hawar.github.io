@@ -6,25 +6,38 @@
         
     }
 }
-#home-page{
+.home-section{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
 .personal-part{
-  max-width: 50%;
+  
 }
 .aboutme-part{
 @include font-s;
-max-width: 50%;
+
 margin-top: auto;
 .describtion{
 margin-bottom: $gutter;
 }
 .my-cv{
+    a{
+        padding-top: 4px;
+            :hover{
+                color: $c-secondary-color;
+                
+            } 
+    }
+    i{
+        @include font-s;
+    }
+
+ 
+}
 
 }
-}
+
 .img-portrait{
     max-width: 200px;
 }

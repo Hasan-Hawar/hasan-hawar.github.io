@@ -86,23 +86,24 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 
 .content { margin: 0 250px; }
 @media screen and (max-width: 1200px) { .content { margin: 0 120px; } }
-@media screen and (max-width: 750px) { .content { margin: 0 60px; } }
+@media screen and (max-width: 750px) { .content { margin: 0 30px; } }
 .content .home-title { margin-top: 20vh; }
 
-#home-page { display: flex; align-items: baseline; justify-content: space-between; }
+.home-section { display: flex; align-items: baseline; justify-content: space-between; }
 
-.personal-part { max-width: 50%; }
-
-.aboutme-part { font-size: 26px; line-height: 1.2; max-width: 50%; margin-top: auto; }
+.aboutme-part { font-size: 26px; line-height: 1.2; margin-top: auto; }
 .aboutme-part .describtion { margin-bottom: 30px; }
+.aboutme-part .my-cv a { padding-top: 4px; }
+.aboutme-part .my-cv a :hover { color: #872018; }
+.aboutme-part .my-cv i { font-size: 26px; line-height: 1.2; }
 
 .img-portrait { max-width: 200px; }
 
 .main-img { width: 80%; border-radius: 50%; }
 
-.brand-heading { font-size: 60px; font-weight: 400; line-height: 1.2; color: #f4f4f4; }
+.brand-heading { font-size: 120px; font-weight: 500; line-height: 1.2; margin-bottom: 30px; color: #f4f4f4; }
 
-.brand-describ { font-size: 26px; line-height: 1.2; color: #f4f4f4; }
+.brand-describ { font-size: 26px; line-height: 1.2; margin-bottom: 30px; color: #f4f4f4; }
 
 .icons { margin-top: 30px; }
 
@@ -152,6 +153,9 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
   .content .home-title .brand-describ { font-size: 26px; line-height: 1.2; margin-bottom: 15px; }
   .content .icons { display: flex; padding: 15px; justify-content: space-evenly; margin-top: 0; }
   .content .icons .social-icons i { padding-right: 0; }
+  .home-section { flex-direction: column; }
+  .home-section .personal-part { margin-bottom: 30px; width: 100%; }
+  .home-section .aboutme-part { width: 100%; }
   .menu-branding, .menu-nav { float: none; width: 100%; }
   .menu-branding.show, .menu-nav.show { transform: translate3d(0, 0, 0); }
   .menu-nav { font-size: 26px; line-height: 1.2; height: 65vh; transform: translate3d(-100%, 0, 0); }
