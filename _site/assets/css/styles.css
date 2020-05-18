@@ -94,7 +94,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 .aboutme-part { font-size: 26px; line-height: 1.2; margin-top: auto; }
 .aboutme-part .describtion { margin-bottom: 30px; }
 .aboutme-part .my-cv a { padding-top: 4px; }
-.aboutme-part .my-cv a :hover { color: #872018; }
+.aboutme-part .my-cv a:hover { color: #872018; }
 .aboutme-part .my-cv i { font-size: 26px; line-height: 1.2; }
 
 .img-portrait { max-width: 200px; }

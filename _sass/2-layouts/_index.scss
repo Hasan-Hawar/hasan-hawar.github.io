@@ -11,23 +11,20 @@
     align-items: baseline;
     justify-content: space-between;
 }
-.personal-part{
-  
-}
+
 .aboutme-part{
 @include font-s;
-
 margin-top: auto;
 .describtion{
 margin-bottom: $gutter;
 }
 .my-cv{
     a{
-        padding-top: 4px;
-            :hover{
-                color: $c-secondary-color;
-                
-            } 
+    padding-top: 4px;
+        &:hover{
+            color: $c-secondary-color;
+            
+        } 
     }
     i{
         @include font-s;
