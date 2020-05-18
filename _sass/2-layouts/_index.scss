@@ -33,11 +33,13 @@ margin-bottom: $gutter;
     border-radius: 50%;
 }
 .brand-heading{
-    @include font-l;
+    @include font-xl;
+    margin-bottom: $gutter;
     color: $c-creme-white;
  }
  .brand-describ{
      @include font-s;
+     margin-bottom: $gutter;
     color: $c-creme-white;
  }
 .icons{
