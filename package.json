@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar/issues"
   },
-  "homepage": "https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar#readme"
+  "homepage": "https://github.com/Hasan-Hawar/Portfolio-Hasan.Hawar#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
 }
