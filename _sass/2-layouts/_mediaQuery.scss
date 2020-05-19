@@ -1,7 +1,41 @@
 
 @include  mq-Desktop {
 }
-@include  mq-aboveTablet {
+@include  mq-AboveTablet {
+    .content {text-align: center;
+        .icons{
+            display: flex;
+            padding: $gutter-small;
+            justify-content: space-evenly;
+            margin-top: 0;
+            .social-icons{
+                i{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    .home-section{
+        flex-direction: column;
+        align-items: center;
+        .personal-part{
+            margin-bottom: $gutter;
+            width: 100%;
+        }
+        .aboutme-part{
+            width: auto;
+        }
+    }
+    .home-title{
+        .brand-heading{
+            @include font-l;
+            font-weight: 500;
+            margin-bottom: $gutter-small;
+        }
+    }
+    .home-section, .aboutme{
+        margin-bottom: $gutter * 2;
+    }
 }
 @include  mq-Tablet {
     .content{
@@ -30,34 +64,56 @@
     }
     .home-section{
         flex-direction: column;
+        align-items: center;
         .personal-part{
             margin-bottom: $gutter;
             width: 100%;
         }
-        .aboutme-part{
+        .myData{
+            width: auto;
+        }
+    }
+    .menu{
+        visibility: hidden;
+        flex-direction: column;
+        &.show{
+            visibility: visible;
             width: 100%;
         }
     }
     .menu-branding, .menu-nav{
         float: none;
         width: 100%;
+        visibility: hidden;
+        @include transition-all;
         &.show{
-            transform: translate3d(0,0,0);
+            visibility: visible;
+            transform: translateX(0);
         }
     }
     .menu-nav{
         @include font-s;
         height: 65vh;
-        transform: translate3d(-100%,0,0);
+        transform: translateX(-100vw);
+        .menu-nav-item{
+            @include transition-all;
+        }
     }
     .menu-branding{
         height: 35vh;
-        transform: translate3d(100%,0,0);
+        transform: translateX(100vw);
         .portrait{
+            .portrait-img{
             width: 150px;
             height: 150px;
+            }
         }
+    }
+
+    .home-section, .aboutme{
+        margin-bottom: $gutter * 2;
     }
 }
 @include  mq-Mobile {
 }
+

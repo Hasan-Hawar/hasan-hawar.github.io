@@ -1,36 +1,45 @@
 
 .content{
-    @include l-sitewidth;
+  
     .home-title{
         margin-top: 20vh;
         
     }
 }
 .home-section{
+    @include l-sitewidth;
+    margin-bottom: $gutter * 4;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    height: 70vh;
 }
 
-.aboutme-part{
+.myData{
 @include font-s;
 margin-top: auto;
 .describtion{
 margin-bottom: $gutter;
 }
 .my-cv{
-    a{
-    padding-top: 4px;
-        &:hover{
-            color: $c-secondary-color;
-            
-        } 
-    }
-    i{
-        @include font-s;
-    }
-
- 
+    border: 1px solid #f4f4f4;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: $gutter-small;
+    padding-top: $gutter-small;
+    transition: all .4s ease-out;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 300;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+        a{
+        color: $c-secondary-color;
+        }
+        background-color: $c-light-black;
+        border-color: $c-secondary-color;
+    } 
 }
 
 }
@@ -59,19 +68,8 @@ margin-bottom: $gutter;
     i{
         padding-right: $gutter;
         &:hover{
-            transition: color .3s ease-out;
-        }
-        &.fa-facebook:hover{
-        color: $c-facebook;
-        }
-        &.fa-linkedin:hover{
-        color: $c-twitter;
-        }
-        &.fa-twitter:hover{
-        color: $c-linkedin;
-        }
-        &.fa-github:hover{
-        color: $c-black;
+            transition: all .4s ease-out;
+            color: $c-secondary-color;
         }
     }
 }
@@ -87,4 +85,39 @@ margin-bottom: $gutter;
     color: $c-secondary-color;
     text-align: center;
     text-decoration: underline;
+}
+
+// about me section styling 
+
+.aboutme{
+background-color: $c-creme-white;
+text-align: center;
+
+}
+.aboutme-container{
+    @include l-sitewidth;
+}
+.aboutme-header{
+    position: relative;
+    padding-bottom: $gutter * 2;
+    padding-top: $gutter * 2;
+    &:after{
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        background-color: $c-light-black;
+        bottom: 20%;
+        transform: translate(-60%, 0);
+    }
+}
+.aboutme-title{
+    color: $c-light-black;
+}
+.aboutme-text{
+    color: $c-light-black;
+}
+.aboutme-content{
+    @include font-s;
+    padding-bottom: $gutter * 2;
 }

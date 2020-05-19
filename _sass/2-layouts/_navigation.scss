@@ -2,12 +2,15 @@
  // menu overlay
 
  .menu{
-     position: absolute;
-     top: 0;
-     width: 100%;
-     opacity: 0.9;
-     visibility: hidden;
-     pointer-events: all;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    pointer-events: all;
+    background-color: darken($c-light-black,5);
      &.show{
          visibility: visible; ;
      }
@@ -19,48 +22,49 @@
         align-items: center;
         justify-content: center;
         float: left;
-        width: 50%;
-        height: 100vh;
+        // width: 50%;
+        // height: 100vh;
         overflow: hidden;
      }
 
      &-nav{
-         background-color: darken($c-light-black,5);
-         transform: translate3d(0, -100%, 0);
-        @include transition-all;
+       
+         height: 70%;
+        //  transform: translate3d(0, -100%, 0);
+        // @include transition-all;
          &.show{
              // slide from top
-             transform: translate3d(0,0,0);
+            //  transform: translate3d(0,0,0);
          }
      }
      // branding side
      &-branding{
-         background-color: $c-light-black;
-         transform: translate3d(0, 100%, 0);
-         @include transition-all;
+         height: 30%;
+        //  transform: translate3d(0, 100%, 0);
+        //  @include transition-all;
          &.show{
             // slide from bottom
-            transform: translate3d(0,0,0);
+            // transform: translate3d(0,0,0);
         }
         .portrait{
-            width: 250px;
-            height: 250px;
-            background: $portrait-img;
-            background-size: cover;
-            border-radius: 50%;
+            .portrait-img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
         }
      }
      .menu-nav-item{
-         transform: translate3d(800px, 0 , 0);
-         @include transition-all;
-         &.show{
-             transform: translate3d(0,0,0);
-         }
-         &:last-child{
-            .nav-link{
-                padding-bottom: 0;
-            }
-         }
+        //  transform: translate3d(800px, 0 , 0);
+        //  @include transition-all;
+        //  &.show{
+        //      transform: translate3d(0,0,0);
+        //  }
+        //  &:last-child{
+        //     .nav-link{
+        //         padding-bottom: 0;
+        //     }
+        //  }
          &.current > a{
              color: $c-secondary-color;
          }
