@@ -1,12 +1,10 @@
-
-.content{
-  
-    .home-title{
+.content {
+    .home-title {
         margin-top: 20vh;
-        
     }
 }
-.home-section{
+
+.home-section {
     @include l-sitewidth;
     margin-bottom: $gutter * 4;
     display: flex;
@@ -15,71 +13,74 @@
     height: 70vh;
 }
 
-.myData{
-@include font-s;
-margin-top: auto;
-.describtion{
-margin-bottom: $gutter;
-}
-.my-cv{
-    border: 1px solid #f4f4f4;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: $gutter-small;
-    padding-top: $gutter-small;
-    transition: all .4s ease-out;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: 300;
-    cursor: pointer;
-    text-align: center;
-    &:hover{
-        a{
-        color: $c-secondary-color;
+.myData {
+    @include font-s;
+    margin-top: auto;
+    .describtion {
+        margin-bottom: $gutter;
+    }
+    .my-cv {
+        border: 1px solid #f4f4f4;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: $gutter-small;
+        padding-top: $gutter-small;
+        transition: all .4s ease-out;
+        cursor: pointer;
+        border-radius: 30px;
+        font-weight: 300;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+            a {
+                color: $c-secondary-color;
+            }
+            background-color: $c-light-black;
+            border-color: $c-secondary-color;
         }
-        background-color: $c-light-black;
-        border-color: $c-secondary-color;
-    } 
+    }
 }
 
-}
-
-.img-portrait{
+.img-portrait {
     max-width: 200px;
 }
-.main-img{
+
+.main-img {
     width: 80%;
     border-radius: 50%;
 }
-.brand-heading{
+
+.brand-heading {
     @include font-xl;
     margin-bottom: $gutter;
     color: $c-creme-white;
- }
- .brand-describ{
-     @include font-s;
-     margin-bottom: $gutter;
+}
+
+.brand-describ {
+    @include font-s;
+    margin-bottom: $gutter;
     color: $c-creme-white;
- }
-.icons{
+}
+
+.icons {
     margin-top: $gutter;
 }
-.social-icons{
-    i{
+
+.social-icons {
+    i {
         padding-right: $gutter;
-        &:hover{
+        &:hover {
             transition: all .4s ease-out;
             color: $c-secondary-color;
         }
     }
 }
 
-.secondary-text{
+.secondary-text {
     color: $c-secondary-color;
-    
 }
 
-.under-construction{
+.under-construction {
     margin: 50px;
     @include font-m;
     color: $c-secondary-color;
@@ -88,36 +89,71 @@ margin-bottom: $gutter;
 }
 
 // about me section styling 
-
-.aboutme{
-background-color: $c-creme-white;
-text-align: center;
-
+.aboutme {
+    background-color: $c-creme-white;
+    text-align: center;
+   
 }
-.aboutme-container{
+
+.aboutme-container {
     @include l-sitewidth;
+    padding: $gutter;
 }
-.aboutme-header{
+
+.aboutme-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: $gutter;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.aboutme-about, .aboutme-infos{
+    width: 50%;
+    }
+.aboutme-about{
+    text-align: left;
+}
+.aboutme-infos{
+    margin-left: $gutter;
+}
+.aboutme-header {
     position: relative;
-    padding-bottom: $gutter * 2;
-    padding-top: $gutter * 2;
-    &:after{
+    padding-bottom: $gutter * 1.5;
+    padding-top: $gutter-small;
+    text-align: left;
+    &:after {
         content: '';
         position: absolute;
         width: 65px;
         height: 2px;
         background-color: $c-light-black;
         bottom: 20%;
-        transform: translate(-60%, 0);
+        transform: translate(0, 0);
     }
 }
-.aboutme-title{
+
+.aboutme-title {
     color: $c-light-black;
 }
-.aboutme-text{
+
+.aboutme-text {
     color: $c-light-black;
 }
-.aboutme-content{
-    @include font-s;
-    padding-bottom: $gutter * 2;
+
+.aboutme-content {
+    @include font-xs;
+    padding-bottom: $gutter-small;
+    &.table-info{
+        display: flex;
+        justify-content: space-between;
+        padding-right: $gutter;
+        .aboutme-list{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+    li{
+        color: $c-light-black;
+    }
+    }
 }
