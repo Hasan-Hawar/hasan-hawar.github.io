@@ -136,13 +136,9 @@
     
 }
 @include  mq-Mobile {
-    .homt{
-        &-container{
-            &-personal-part{
-                padding: 0;
-            }
-        }
-    }
+    .home-container{
+        padding: 0;
+    }    
     .aboutme{
         &-container{
             padding: 0;

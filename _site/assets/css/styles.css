@@ -187,7 +187,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
   .menu-nav-item { transition: all .4s ease-out; }
   .menu-branding { height: 35vh; transform: translateX(100vw); }
   .menu-branding .portrait-img { width: 150px; height: 150px; } }
-@media screen and (max-width: 500px) { .homt-container-personal-part { padding: 0; }
+@media screen and (max-width: 500px) { .home-container { padding: 0; }
   .aboutme-container { padding: 0; margin: 0 auto; }
   .aboutme-inner { padding: 15px; }
   .aboutme-about { margin-right: 0; }
