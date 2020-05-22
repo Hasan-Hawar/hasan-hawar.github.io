@@ -16,15 +16,17 @@
         }
     }
     .home-section{
-        flex-direction: column;
-        align-items: center;
-        .personal-part{
-            margin-bottom: $gutter;
-            width: 100%;
-        }
-        .aboutme-part{
-            width: auto;
-        }
+        // .home-container{
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
+        // .personal-part{
+        //     margin-bottom: $gutter;
+        //     width: 100%;
+        // }
+        // .aboutme-part{
+        //     width: auto;
+        // }
     }
     .home-title{
         .brand-heading{
@@ -63,16 +65,30 @@
         }
     }
     .home-section{
+        .home-container{
         flex-direction: column;
         align-items: center;
+        }
         .personal-part{
-            margin-bottom: $gutter;
+            margin-bottom: $gutter * 2.5;
             width: 100%;
         }
         .myData{
             width: auto;
         }
     }
+    .aboutme{
+        &-inner{
+            flex-direction: column;
+        }
+        &-title{
+            @include font-s;
+            &:after{
+                bottom: 10%;
+            }
+        }
+    }
+    
     .menu{
         visibility: hidden;
         flex-direction: column;
@@ -95,7 +111,7 @@
         @include font-s;
         height: 65vh;
         transform: translateX(-100vw);
-        .menu-nav-item{
+        &-item{
             @include transition-all;
         }
     }
@@ -103,17 +119,41 @@
         height: 35vh;
         transform: translateX(100vw);
         .portrait{
-            .portrait-img{
+            &-img{
             width: 150px;
             height: 150px;
             }
         }
     }
-
-    .home-section, .aboutme{
-        margin-bottom: $gutter * 2;
-    }
+    
 }
 @include  mq-Mobile {
+    .homt{
+        &-container{
+            &-personal-part{
+                padding: 0;
+            }
+        }
+    }
+    .aboutme{
+        &-container{
+            padding: 0;
+            margin: 0 auto;
+        }
+        &-inner{
+            padding: $gutter-small;
+        }
+        &-about{
+            margin-right: 0;
+        }
+        &-content{
+            &.table-info{
+                padding-right: 0;
+            }
+        }
+        &-list{
+            margin-right: 0;
+        }
+    }
 }
 

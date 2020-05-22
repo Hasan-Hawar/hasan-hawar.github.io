@@ -28,7 +28,7 @@ $font-size: 14px;
 @mixin  font-xs {
     font-size: 18px;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 300;
 }
 @mixin font-base{
     font-size: $font-size;

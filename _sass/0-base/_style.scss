@@ -9,9 +9,9 @@ $portrait-img: url('../img/portrait.png');
 
 
 @mixin l-sitewidth{
-    margin: 0 250px;
+    margin: 0 180px;
     @include mq-AboveTablet{
-        margin: 0 200px;
+        margin: 0 100px;
     }
    @include mq-Tablet {
         margin: 0 30px;

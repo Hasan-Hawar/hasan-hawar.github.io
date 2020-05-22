@@ -1,20 +1,26 @@
-.content {
-    .home-title {
+.home {
+   &-title {
         margin-top: 20vh;
+        margin-bottom: $gutter;
     }
-}
-
-.home-section {
-    @include l-sitewidth;
-    margin-bottom: $gutter * 4;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    height: 70vh;
+    &-section {
+        
+        margin-bottom: $gutter * 4;
+       
+        height: 70vh;
+    }
+    &-container{
+        @include l-sitewidth;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: $gutter;
+    }
 }
 
 .myData {
     @include font-s;
+    min-width: fit-content;
     margin-top: auto;
     .describtion {
         margin-bottom: $gutter;
@@ -57,8 +63,7 @@
 }
 
 .brand-describ {
-    @include font-s;
-    margin-bottom: $gutter;
+    @include font-s;  
     color: $c-creme-white;
 }
 
@@ -92,68 +97,64 @@
 .aboutme {
     background-color: $c-creme-white;
     text-align: center;
+    &-container {
+        @include l-sitewidth;
+        padding-top: $gutter;
+        padding-bottom: $gutter;
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: $gutter-small;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+    }
+    &-about{
+        text-align: left;
+        margin-right: $gutter-small;
+    }
+    &-info{
+        min-width: fit-content;
+    }
+    &-header {
+        position: relative;
+        padding-bottom: $gutter * 1.5;
+        padding-top: $gutter-small;
+        text-align: left;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 65px;
+            height: 2px;
+            background-color: $c-light-black;
+            bottom: 20%;
+            transform: translate(0, 0);
+        }
+    }
+    &-content {
+        @include font-xs;
+        padding-bottom: $gutter-small;
+        &.table-info{
+            display: flex;
+            padding-right: $gutter;
+            
+        }
+    }
+    &-list{
+        min-width: 40%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        li{
+            color: $c-light-black;
+        }
+    }
+    &-title, &-text{
+        color: $c-light-black;
+    }
+    &-title{
+        @include font-m;
+    }
    
 }
 
-.aboutme-container {
-    @include l-sitewidth;
-    padding: $gutter;
-}
 
-.aboutme-inner {
-    display: flex;
-    justify-content: space-between;
-    padding: $gutter;
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-}
-.aboutme-about, .aboutme-infos{
-    width: 50%;
-    }
-.aboutme-about{
-    text-align: left;
-}
-.aboutme-infos{
-    margin-left: $gutter;
-}
-.aboutme-header {
-    position: relative;
-    padding-bottom: $gutter * 1.5;
-    padding-top: $gutter-small;
-    text-align: left;
-    &:after {
-        content: '';
-        position: absolute;
-        width: 65px;
-        height: 2px;
-        background-color: $c-light-black;
-        bottom: 20%;
-        transform: translate(0, 0);
-    }
-}
-
-.aboutme-title {
-    color: $c-light-black;
-}
-
-.aboutme-text {
-    color: $c-light-black;
-}
-
-.aboutme-content {
-    @include font-xs;
-    padding-bottom: $gutter-small;
-    &.table-info{
-        display: flex;
-        justify-content: space-between;
-        padding-right: $gutter;
-        .aboutme-list{
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-        }
-    li{
-        color: $c-light-black;
-    }
-    }
-}
