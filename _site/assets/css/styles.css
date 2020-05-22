@@ -120,8 +120,8 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 @media screen and (min-width: 769px) and (max-width: 1170px) { .aboutme-container { margin: 0 100px; } }
 @media screen and (max-width: 768px) { .aboutme-container { margin: 0 30px; } }
 .aboutme-inner { display: flex; justify-content: space-between; padding: 15px; box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2); }
-.aboutme-about { text-align: left; margin-right: 15px; }
-.aboutme-info { min-width: fit-content; }
+.aboutme-about { text-align: left; margin-right: 15px; min-width: 50%; }
+.aboutme-infos { min-width: 50%; }
 .aboutme-header { position: relative; padding-bottom: 45px; padding-top: 15px; text-align: left; }
 .aboutme-header:after { content: ''; position: absolute; width: 65px; height: 2px; background-color: #202020; bottom: 20%; transform: translate(0, 0); }
 .aboutme-content { font-size: 18px; line-height: 1.2; font-weight: 300; padding-bottom: 15px; }
@@ -165,7 +165,8 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
   .content .icons { display: flex; padding: 15px; justify-content: space-evenly; margin-top: 0; }
   .content .icons .social-icons i { padding-right: 0; }
   .home-title .brand-heading { font-size: 60px; font-weight: 400; line-height: 1.2; font-weight: 500; margin-bottom: 15px; }
-  .home-section, .aboutme { margin-bottom: 60px; } }
+  .home-section, .aboutme { margin-bottom: 60px; }
+  .aboutme-about { min-width: auto; } }
 @media screen and (max-width: 768px) { .content { text-align: center; }
   .content .home-title .brand-heading { font-size: 40px; line-height: 1.3; margin-bottom: 15px; }
   .content .home-title .brand-describ { font-size: 26px; line-height: 1.2; margin-bottom: 15px; }
@@ -177,6 +178,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
   .aboutme-inner { flex-direction: column; }
   .aboutme-title { font-size: 26px; line-height: 1.2; }
   .aboutme-title:after { bottom: 10%; }
+  .aboutme-infos { min-width: fit-content; }
   .menu { visibility: hidden; flex-direction: column; }
   .menu.show { visibility: visible; width: 100%; }
   .menu-branding, .menu-nav { float: none; width: 100%; visibility: hidden; transition: all .4s ease-out; }

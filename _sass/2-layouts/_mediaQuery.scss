@@ -38,6 +38,11 @@
     .home-section, .aboutme{
         margin-bottom: $gutter * 2;
     }
+    .aboutme{
+        &-about{
+            min-width: auto;
+        }
+    }
 }
 @include  mq-Tablet {
     .content{
@@ -86,6 +91,9 @@
             &:after{
                 bottom: 10%;
             }
+        }
+        &-infos{
+            min-width: fit-content;
         }
     }
     

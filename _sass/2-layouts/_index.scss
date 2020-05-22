@@ -111,9 +111,10 @@
     &-about{
         text-align: left;
         margin-right: $gutter-small;
+        min-width: 50%;
     }
-    &-info{
-        min-width: fit-content;
+    &-infos{
+        min-width: 50%;
     }
     &-header {
         position: relative;
