@@ -10,7 +10,7 @@
     flex-direction: column;
     visibility: visible;
     pointer-events: all;
-    background-color: darken($c-light-black,5);
+    background-color: darken($c-light-black,3);
      &.show{
          visibility: visible; ;
      }

@@ -141,7 +141,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 .aboutme-content.table-info .aboutme-list { text-align: right; display: flex; flex-direction: column; align-items: end; }
 .aboutme-content.table-info li { color: #202020; }
 
-.menu { position: absolute; top: 0; height: 100vh; opacity: 0.9; display: flex; flex-direction: column; visibility: visible; pointer-events: all; background-color: #131313; }
+.menu { position: absolute; top: 0; height: 100vh; opacity: 0.9; display: flex; flex-direction: column; visibility: visible; pointer-events: all; background-color: #181818; }
 .menu.show { visibility: visible; }
 .menu-branding, .menu-nav { pointer-events: all; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; float: left; overflow: hidden; }
 .menu-nav { height: 70%; }
