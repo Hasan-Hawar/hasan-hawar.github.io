@@ -8,7 +8,7 @@
     opacity: 0.9;
     display: flex;
     flex-direction: column;
-    visibility: visible;
+    visibility: hidden;
     pointer-events: all;
     background-color: darken($c-light-black,3);
      &.show{
@@ -22,29 +22,27 @@
         align-items: center;
         justify-content: center;
         float: left;
-        // width: 50%;
-        // height: 100vh;
+        height: 100vh;
         overflow: hidden;
      }
 
      &-nav{
-       
          height: 70%;
-        //  transform: translate3d(0, -100%, 0);
-        // @include transition-all;
+         transform: translate3d(-100%, 0, 0);
+        @include transition-all;
          &.show{
-             // slide from top
-            //  transform: translate3d(0,0,0);
+            //  slide from top
+             transform: translate3d(0,0,0);
          }
      }
      // branding side
      &-branding{
          height: 30%;
-        //  transform: translate3d(0, 100%, 0);
-        //  @include transition-all;
+         transform: translate3d(-100%, 0, 0);
+         @include transition-all;
          &.show{
             // slide from bottom
-            // transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
         }
         .portrait{
             .portrait-img{
@@ -55,16 +53,18 @@
         }
      }
      .menu-nav-item{
-        //  transform: translate3d(800px, 0 , 0);
-        //  @include transition-all;
-        //  &.show{
-        //      transform: translate3d(0,0,0);
-        //  }
-        //  &:last-child{
-        //     .nav-link{
-        //         padding-bottom: 0;
-        //     }
-        //  }
+        @include transition-all;
+        transform: translate3d(-100%, 0 , 0);
+        margin-bottom: auto;
+        margin-top: auto;
+         &.show{
+             transform: translate3d(0,0,0);
+         }
+         &:last-child{
+            .nav-link{
+                padding-bottom: 0;
+            }
+         }
          &.current > a{
              color: $c-secondary-color;
          }
