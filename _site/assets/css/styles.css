@@ -121,8 +121,8 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 @media screen and (max-width: 768px) { .aboutme-container { margin: 0 30px; } }
 .aboutme-inner { display: flex; justify-content: space-between; padding: 15px; box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2); }
 .aboutme-about { text-align: left; margin-right: 15px; min-width: 50%; }
-.aboutme-infos { min-width: 50%; }
-.aboutme-header { position: relative; padding-bottom: 45px; padding-top: 15px; text-align: left; }
+.aboutme-infos { width: 50%; min-width: fit-content; }
+.aboutme-header { position: relative; padding-bottom: 45px; padding-top: 15px; text-align: left; white-space: nowrap; }
 .aboutme-header:after { content: ''; position: absolute; width: 65px; height: 2px; background-color: #202020; bottom: 20%; transform: translate(0, 0); }
 .aboutme-content { font-size: 18px; line-height: 1.2; font-weight: 300; padding-bottom: 15px; }
 .aboutme-content.table-info { display: flex; padding-right: 30px; }

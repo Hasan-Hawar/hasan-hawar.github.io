@@ -114,13 +114,15 @@
         min-width: 50%;
     }
     &-infos{
-        min-width: 50%;
+        width: 50%;
+        min-width: fit-content;
     }
     &-header {
         position: relative;
         padding-bottom: $gutter * 1.5;
         padding-top: $gutter-small;
         text-align: left;
+        white-space: nowrap;
         &:after {
             content: '';
             position: absolute;
