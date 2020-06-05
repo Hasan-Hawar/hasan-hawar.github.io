@@ -23,11 +23,11 @@
         justify-content: center;
         float: left;
         height: 100vh;
+        max-height: fit-content;
         overflow: hidden;
      }
 
      &-nav{
-         height: 70%;
          transform: translate3d(-100%, 0, 0);
         @include transition-all;
          &.show{
@@ -37,7 +37,6 @@
      }
      // branding side
      &-branding{
-         height: 30%;
          transform: translate3d(-100%, 0, 0);
          @include transition-all;
          &.show{
@@ -55,8 +54,7 @@
      .menu-nav-item{
         @include transition-all;
         transform: translate3d(-100%, 0 , 0);
-        margin-bottom: auto;
-        margin-top: auto;
+        margin-top: $gutter;
          &.show{
              transform: translate3d(0,0,0);
          }
@@ -74,7 +72,6 @@
          @include font-m;
          display: inline-block;
          position: relative;
-         padding-bottom: $gutter;
          text-transform: uppercase;
          color: $c-creme-white;
          transition: color .4s ease-out;
