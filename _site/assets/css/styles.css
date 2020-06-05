@@ -85,6 +85,8 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 
 .proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
 
+.header-content { position: fixed; top: 0; width: 100%; z-index: 999; }
+
 :root { --pgbar-length: 100%; }
 
 .home-title { margin-top: 20vh; margin-bottom: 30px; }
