@@ -83,7 +83,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 
 .proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
 
-.header-content { position: fixed; top: 0; width: 100%; z-index: 999; }
+.header-content { position: fixed; top: 0; width: 100%; height: 100%; z-index: 999; }
 
 :root { --pgbar-length: 100%; --percent: 1; --MATH-PI: 3.1415px; }
 
@@ -281,18 +281,19 @@ footer { position: relative; width: 100%; }
   .menu-branding { height: 35vh; transform: translateX(100vw); }
   .menu-branding .portrait-img { width: 150px; height: 150px; }
   .detail-section { opacity: 1; margin-top: 30px; }
+  .detail-section.work, .detail-section.edu { margin-left: 15px; margin-right: 15px; }
   .detail-title { margin-bottom: 15px; }
   .detail:hover > .detail-section:not(:hover) { opacity: 1; }
+  .detail .timeline-block { padding-right: 5px; padding-left: 5px; }
   .detail .timeline-block h1 { color: #872018; }
   .detail-section .title-icon { margin-right: 15px; }
   .detail-section:hover .title-icon { transform: none; margin-right: 15px; }
   .detail-section:hover .title-icon + span { letter-spacing: unset; }
   .detail-section > .detail-content { padding: 0; }
+  .detail-section.interests .detail-content { display: flex; flex-direction: column; align-items: center; }
   .pg-list > li { margin-bottom: 15px; margin-top: 15px; text-align: left; }
   .title-icon i { font-size: 16px; line-height: 1.2; }
-  .outer-frame { width: max-content; padding: 15px; }
-  .favor-list { flex-direction: column; }
-  .favor-list li { margin-bottom: 15px; } }
+  .outer-frame { width: 100%; padding: 15px; } }
 @media screen and (max-width: 500px) { .home-container { padding: 0; }
   .aboutme-container { padding: 0; }
   .aboutme-inner { padding: 15px; }
@@ -300,6 +301,9 @@ footer { position: relative; width: 100%; }
   .aboutme-content.table-info { padding-right: 0; }
   .aboutme-list { min-width: 30%; margin-right: 0; }
   .detail-section.interests .detail-content { display: flex; flex-direction: column; align-items: center; }
+  .outer-frame { width: fit-content; }
+  .favor-list { flex-direction: column; }
+  .favor-list li { margin-bottom: 15px; }
   .tool-list li { width: 33%; }
   .tool-list li:not(:hover) svg .cbar { stroke-width: 4px; stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent))); }
   .tool-list li .tl-name, .tool-list li .tl-exp { font-size: 12px; line-height: 1.2; font-weight: 300; }
