@@ -83,7 +83,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 
 .proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
 
-.header-content { position: fixed; top: 0; width: 100%; height: 100%; z-index: 999; }
+.header-content { position: fixed; top: 0; width: 100%; z-index: 999; }
 
 :root { --pgbar-length: 100%; --percent: 1; --MATH-PI: 3.1415px; }
 
@@ -157,7 +157,7 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 .detail-section:hover .title-icon + span { letter-spacing: 1.5px; }
 
 /* time line block in education section */
-.timeline-block { position: relative; background-color: rgba(135, 32, 24, 0.2); padding: 30px; border-radius: 15px; }
+.timeline-block { position: relative; background-color: rgba(32, 32, 32, 0.6); padding: 30px; border-radius: 15px; }
 
 .timeline-block:not(:last-of-type) { margin-bottom: 15px; }
 
