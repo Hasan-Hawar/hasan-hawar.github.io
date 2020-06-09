@@ -45,7 +45,7 @@
     }
 }
 @include  mq-Tablet {
-    .content{
+    .main-content{
         text-align: center;
         .home-title{
             .brand-heading{
@@ -134,8 +134,70 @@
             }
         }
     }
+.detail{
+    &-section {
+        opacity: 1;
+        margin-top: $gutter;
+    }
+    &-title{
+        margin-bottom: $gutter-small;
+    }
+ 
+    &:hover > &-section:not(:hover) {
+        opacity: 1;
+    }
     
+    .timeline-block h1 {
+        color: $c-secondary-color;
+    }
+    &-section {
+        .title-icon{
+            margin-right: $gutter-small;
+    }
+    }
+    &-section:hover {
+        .title-icon {
+            transform: none;
+            margin-right: $gutter-small;
+    }
+    }
+    &-section:hover {
+        .title-icon + span {
+            letter-spacing:unset;
+    }
+    }
+    &-section > &-content{
+        padding: 0;
+    }
+
 }
+    
+    .pg-skill{
+        
+    }
+    .pg-list > li{
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-align: left;
+    }
+    .title-icon i{
+        @include font-base;
+    }
+
+    .outer-frame{
+        width: max-content;
+        padding:$gutter-small
+    }
+    .favor-list{
+        flex-direction: column;
+        li{
+            margin-bottom: $gutter-small;
+        }
+    }
+}
+
+
+// Mobile Media Query
 @include  mq-Mobile {
     .home-container{
         padding: 0;
@@ -159,6 +221,50 @@
             min-width: 30%;
             margin-right: 0;
         }
+    }
+
+
+    .detail-section{
+        &.interests{
+            .detail-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+  
+    
+
+    .tool-list
+    {
+      
+        li{
+            width: 33%;
+            // svg{
+            //     width: 100%;
+            // }
+            &:not(:hover){
+                svg{
+                    .cbar {
+                        stroke-width: 4px;
+                        stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+                    } 
+                } 
+                
+            }
+            .tl-name,
+            .tl-exp {
+                @include font-x;
+            } 
+            .tl-name{
+                top: 30%;
+            }
+            .tl-exp{
+                top: calc(40% + 15px);
+            }
+        } 
+        
     }
 }
 

@@ -30,6 +30,12 @@ $font-size: 16px;
     line-height: 1.2;
     font-weight: 300;
 }
+@mixin  font-x{
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 300;
+} 
+    
 @mixin font-base{
     font-size: $font-size;
     line-height: 1.2;

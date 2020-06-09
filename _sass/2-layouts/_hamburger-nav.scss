@@ -1,13 +1,11 @@
 .menu-btn{
-   // display: none;
-   // @include mq-Tablet{
    display: block;;
    position: absolute;
    z-index: 3;
    right: $gutter;
    top: $gutter;
    cursor: pointer;
-   transition: all .4s ease-out;
+   @include transition-all;
    pointer-events: all;
  
    .btn-line{
@@ -15,8 +13,8 @@
       height: 3px;
       margin: 0;
       margin-bottom: 5px;
-      background-color: $c-creme-white;;
-      transition: transform rotate translate .4s ease-out;
+      background-color:$c-secondary-color;
+      @include transition-all;
    }
       // Rotate into X with menu line
 
@@ -38,4 +36,3 @@
       }
    }
  } 
-// }
