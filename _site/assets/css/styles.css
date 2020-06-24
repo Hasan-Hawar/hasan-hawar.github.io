@@ -79,7 +79,17 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 
 .hide { display: none; }
 
-#bg-img#bg-img { background-image: url("../img/home_sec.jpg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.menu-btn { display: block; position: absolute; z-index: 3; right: 30px; top: 30px; cursor: pointer; transition: all .4s ease-out; pointer-events: all; }
+.menu-btn .btn-line { width: 28px; height: 3px; margin: 0; margin-bottom: 5px; background-color: #872018; transition: all .4s ease-out; }
+.menu-btn.close { transform: rotate(180deg); }
+.menu-btn.close .btn-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.menu-btn.close .btn-line:nth-child(2) { opacity: 0; }
+.menu-btn.close .btn-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+.main-content { flex-grow: 1; }
 
 .proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
 
@@ -242,13 +252,6 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 .menu-nav-item:nth-child(3) { transition-delay: 0.3s; }
 
 .menu-nav-item:nth-child(4) { transition-delay: 0.4s; }
-
-.menu-btn { display: block; position: absolute; z-index: 3; right: 30px; top: 30px; cursor: pointer; transition: all .4s ease-out; pointer-events: all; }
-.menu-btn .btn-line { width: 28px; height: 3px; margin: 0; margin-bottom: 5px; background-color: #872018; transition: all .4s ease-out; }
-.menu-btn.close { transform: rotate(180deg); }
-.menu-btn.close .btn-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.menu-btn.close .btn-line:nth-child(2) { opacity: 0; }
-.menu-btn.close .btn-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
 footer { position: relative; width: 100%; }
 

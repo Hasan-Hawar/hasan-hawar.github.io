@@ -19,7 +19,6 @@ $portrait-img: url('../img/portrait.png');
         margin: 0 15px;
     }
 }
-
 @mixin background {
     @if $show-home-img {
         &#bg-img{
