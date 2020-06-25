@@ -43,7 +43,11 @@
             min-width: auto;
         }
     }
+ 
 }
+
+
+//Tablet MediaQuery
 @include  mq-Tablet {
     .main-content{
         text-align: center;
@@ -204,6 +208,16 @@
         width: 100%;
         padding:$gutter-small
     }
+
+    .blog{
+        &-holder{
+          column-count: 2;
+          
+        }
+        &-content{
+    
+        }
+    }
    
 }
 
@@ -280,6 +294,15 @@
             }
         } 
         
+    }
+    .blog{
+        &-holder{
+          column-count: 1;
+          
+        }
+        &-content{
+    
+        }
     }
 }
 

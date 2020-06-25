@@ -6,7 +6,6 @@
 
 .home {
    &-title {
-        margin-top: 20vh;
         margin-bottom: $gutter;
     }
     &-section {
@@ -14,7 +13,6 @@
         height: 60vh;
     }
     &-container{
-        @include l-sitewidth;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
@@ -102,7 +100,6 @@
     margin-bottom: $gutter * 4;     
     text-align: center;
     &-container {
-        @include l-sitewidth;
         padding-top: $gutter;
         padding-bottom: $gutter;
     }
@@ -170,7 +167,6 @@
 
 /* Detail section overall setting*/
 .detail {
-    @include l-sitewidth;
     &:hover > .detail-section:not(:hover) {
         opacity: 0.5;
     }

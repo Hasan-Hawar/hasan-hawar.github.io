@@ -1,9 +1,12 @@
 ---
 layout: default
 title: "Home Page - About Section"
+lang: De
+permalink: /Damascus/
 ---
 
 
-# Home Page - About Section
+  <p class="blog-describe">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, hic.
+  </p>
 
-Change the layout of the nav and add home section

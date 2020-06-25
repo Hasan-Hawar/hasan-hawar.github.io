@@ -6,6 +6,8 @@ body {
 }
 
 .main-content {
+  @include l-sitewidth;
+  margin-top: 20vh;
   flex-grow: 1;
 }
 

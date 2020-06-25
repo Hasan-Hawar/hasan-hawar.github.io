@@ -2,15 +2,18 @@
 layout: default
 ---
 
-
-<seciton class="blog-container">
-
-
-<h2 class="blog-container-title" >My Blogs</h2>
-  <div class="blog">
-    <img src="" alt="" class="blog.img">
-    <h3 class="blog-title"></h3>
-    <p class="blog-describe"></p>
+<seciton class="blog-section">
+  <div class="blog-container">
+    <h2 class="blog-container-title">My Blogs</h2>
+    <div class="blog-holder">
+      {% for post in site.posts %}
+      <div class="blog-content">
+        <!-- <img src="https://via.placeholder.com/300" alt="" class="blog.img" /> -->
+        <a href="{{ post.url }}"><h3 class="blog-title">{{post.title }}</h3></a>
+        <p>{{post.date}}</p>
+        {{post.content}}
+      </div>
+      {% endfor %}
+    </div>
   </div>
-
 </seciton>

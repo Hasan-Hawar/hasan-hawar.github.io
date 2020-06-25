@@ -71,6 +71,8 @@ textarea { overflow: auto; }
 
 body { font-size: 16px; line-height: 1.2; font-family: "Oswald", Arial, sans-serif; background-color: #202020; }
 
+section { width: 100%; }
+
 a { text-decoration: none; }
 
 ul li { list-style: none; }
@@ -86,23 +88,11 @@ h6, h5, h4, h3, h2, h1, p, small { padding: 0; margin: 0; }
 .menu-btn.close .btn-line:nth-child(2) { opacity: 0; }
 .menu-btn.close .btn-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 
-body { display: flex; flex-direction: column; min-height: 100vh; }
-body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-
-.main-content { flex-grow: 1; }
-
-.proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
-
-.header-content { position: fixed; top: 0; width: 100%; z-index: 999; }
-
 :root { --pgbar-length: 100%; --percent: 1; --MATH-PI: 3.1415px; }
 
-.home-title { margin-top: 20vh; margin-bottom: 30px; }
+.home-title { margin-bottom: 30px; }
 .home-section { margin-bottom: 120px; height: 60vh; }
-.home-container { margin: 0 250px; display: flex; align-items: baseline; justify-content: space-between; padding: 30px; }
-@media screen and (min-width: 1600px) { .home-container { margin: 0 350px; } }
-@media screen and (min-width: 769px) and (max-width: 1170px) { .home-container { margin: 0 120px; } }
-@media screen and (max-width: 768px) { .home-container { margin: 0 15px; } }
+.home-container { display: flex; align-items: baseline; justify-content: space-between; padding: 30px; }
 
 .myData { font-size: 26px; line-height: 1.2; min-width: fit-content; margin-top: auto; }
 .myData .describtion { margin-bottom: 30px; }
@@ -128,10 +118,7 @@ body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachmen
 .under-construction { margin: 50px; font-size: 40px; line-height: 1.3; color: #872018; text-align: center; text-decoration: underline; }
 
 .aboutme { margin-bottom: 120px; text-align: center; }
-.aboutme-container { margin: 0 250px; padding-top: 30px; padding-bottom: 30px; }
-@media screen and (min-width: 1600px) { .aboutme-container { margin: 0 350px; } }
-@media screen and (min-width: 769px) and (max-width: 1170px) { .aboutme-container { margin: 0 120px; } }
-@media screen and (max-width: 768px) { .aboutme-container { margin: 0 15px; } }
+.aboutme-container { padding-top: 30px; padding-bottom: 30px; }
 .aboutme-inner { display: flex; justify-content: space-between; padding: 15px; box-shadow: 0 0px 32px -5px rgba(135, 32, 24, 0.8); background: #f4f4f4; border-radius: 15px; }
 .aboutme-about { text-align: left; margin-right: 15px; min-width: 50%; }
 .aboutme-infos { width: 50%; min-width: fit-content; }
@@ -145,10 +132,6 @@ body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachmen
 .aboutme-title { font-size: 40px; line-height: 1.3; }
 
 /* Detail section overall setting*/
-.detail { margin: 0 250px; }
-@media screen and (min-width: 1600px) { .detail { margin: 0 350px; } }
-@media screen and (min-width: 769px) and (max-width: 1170px) { .detail { margin: 0 120px; } }
-@media screen and (max-width: 768px) { .detail { margin: 0 15px; } }
 .detail:hover > .detail-section:not(:hover) { opacity: 0.5; }
 .detail-section { transition: all .4s ease-out; margin-bottom: 30px; }
 .detail-section:not(:last-of-type) { padding-bottom: 22.5px; }
@@ -230,6 +213,24 @@ body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachmen
 
 @keyframes circle { 0% { box-shadow: 0 0 0 0px #333439; }
   100% { box-shadow: 0 0 0 6px rgba(51, 52, 57, 0); } }
+.blog-container { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 30px; }
+.blog-container-title { margin-bottom: 60px; }
+.blog-holder { column-count: 3; column-gap: 15px; }
+.blog-content { background-color: rgba(69, 69, 69, 0.6); padding: 15px; margin-bottom: 15px; display: inline-block; width: 100%; border-radius: 15px; box-sizing: border-box; }
+.blog-content img { width: 100%; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+body#bg-img { background-image: url("../img/home_sec.jpg"); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+.main-content { margin: 0 250px; margin-top: 20vh; flex-grow: 1; }
+@media screen and (min-width: 1600px) { .main-content { margin: 0 350px; } }
+@media screen and (min-width: 769px) and (max-width: 1170px) { .main-content { margin: 0 120px; } }
+@media screen and (max-width: 768px) { .main-content { margin: 0 15px; } }
+
+.proj-header { position: fixed; height: 100px; width: 100%; top: 0; pointer-events: none; color: #f4f4f4; }
+
+.header-content { position: fixed; top: 0; width: 100%; z-index: 999; }
+
 .menu { position: absolute; top: 0; height: 100vh; opacity: 0.9; display: flex; flex-direction: column; visibility: hidden; pointer-events: all; background-color: #181818; }
 .menu.show { visibility: visible; }
 .menu-branding, .menu-nav { pointer-events: all; display: flex; flex-flow: column wrap; align-items: center; justify-content: center; float: left; height: 100vh; max-height: fit-content; overflow: hidden; }
@@ -296,7 +297,8 @@ footer { position: relative; width: 100%; }
   .detail-section.interests .detail-content { display: flex; flex-direction: column; align-items: center; }
   .pg-list > li { margin-bottom: 15px; margin-top: 15px; text-align: left; }
   .title-icon i { font-size: 16px; line-height: 1.2; }
-  .outer-frame { width: 100%; padding: 15px; } }
+  .outer-frame { width: 100%; padding: 15px; }
+  .blog-holder { column-count: 2; } }
 @media screen and (max-width: 500px) { .home-container { padding: 0; }
   .aboutme-container { padding: 0; }
   .aboutme-inner { padding: 15px; }
@@ -311,4 +313,5 @@ footer { position: relative; width: 100%; }
   .tool-list li:not(:hover) svg .cbar { stroke-width: 4px; stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent))); }
   .tool-list li .tl-name, .tool-list li .tl-exp { font-size: 12px; line-height: 1.2; font-weight: 300; }
   .tool-list li .tl-name { top: 30%; }
-  .tool-list li .tl-exp { top: calc(40% + 15px); } }
+  .tool-list li .tl-exp { top: calc(40% + 15px); }
+  .blog-holder { column-count: 1; } }
