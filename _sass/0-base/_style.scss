@@ -12,6 +12,7 @@ $portrait-img: url('~/assets/img/portrait.png');
         margin: 0 350px;
     }
     margin: 0 250px;
+    margin-top: 20vh !important;
     @include mq-AboveTablet{
         margin: 0 120px;
     }
