@@ -1,0 +1,29 @@
+.comingsoon {
+  &-section {
+    width: 100%;
+    text-align: center;
+  }
+  &-PageHeader {
+    @include font-l;
+    margin-bottom: $gutter * 2;
+  }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $gutter;
+    background-color: rgba($c-lighter-black, $alpha: 0.1);
+    box-shadow: 0 0px 32px -5px rgba($c-secondary-color, $alpha: 0.8);
+    border-radius: 15px;
+  }
+  &-header {
+    margin-bottom: $gutter;
+    color: $c-creme-white;
+  }
+  &-titles,
+  &-dates {
+    @include font-m;
+    padding: $gutter-small * 2;
+    color: $c-creme-white;
+  }
+}
