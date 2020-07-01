@@ -1,18 +1,19 @@
-
 <nav class="menu">
-<div class="menu-branding">
+  <div class="menu-branding">
     <div class="portrait">
-        <img src="../assets/img/portrait.png" alt="" class="portrait-img">
+      <img src="../assets/img/portrait.png" alt="" class="portrait-img" />
     </div>
-</div>
+  </div>
 
-<ul class="menu-nav">
-    {% for item in site.data.navigation.links %}
-        {% if page.url == item.url %}
-            <li class="menu-nav-item current"><a href="{{ item.url }}" class="nav-link " >{{ item.title }}</a></li>
-        {% else %}
-            <li class="menu-nav-item"><a href="{{ item.url }}" class="nav-link " >{{ item.title }}</a></li>
-        {% endif %}
-    {% endfor %}
-</ul>
+  <ul class="menu-nav">
+    {% for item in site.data.navigation.links %} {% if page.url == item.url %}
+    <li class="menu-nav-item current">
+      <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+    </li>
+    {% else %}
+    <li class="menu-nav-item">
+      <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
 </nav>

@@ -1,66 +1,85 @@
-
 $gutter: 30px;
 $gutter-small: 15px;
 
 $show-home-img: true;
-$home-img: url('../img/home_sec.jpg');
-$portrait-img: url('~/assets/img/portrait.png');
+$home-img: url("../img/home_sec.jpg");
+$portrait-img: url("~/assets/img/portrait.png");
 
-
-@mixin l-sitewidth{
-    @include mq-AboveDesktop{
-        margin: 0 350px;
-    }
-    margin: 0 250px;
-    margin-top: 20vh !important;
-    @include mq-AboveTablet{
-        margin: 0 120px;
-    }
-   @include mq-Tablet {
-        margin: 0 15px;
-    }
+@mixin l-sitewidth {
+  @include mq-AboveDesktop {
+    margin: 0 350px;
+  }
+  margin: 0 250px;
+  margin-top: 20vh !important;
+  @include mq-AboveTablet {
+    margin: 0 80px;
+  }
+  @include mq-Tablet {
+    margin: 0 30px;
+  }
+  @include mq-Mobile {
+    margin: 0 15px;
+  }
 }
 @mixin background {
-    @if $show-home-img {
-        &#bg-img{
-            background-image: $home-img;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+  @if $show-home-img {
+    &#bg-img {
+      background-image: $home-img;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
+  }
 }
 
-@mixin transition-all{
-    transition: all .4s ease-out;
+@mixin primary-button {
+  border: 1px solid #f4f4f4;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: $gutter-small;
+  padding-top: $gutter-small;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 300;
+  text-align: center;
+  &:hover {
+    a {
+      color: $c-secondary-color;
+    }
+    background-color: $c-light-black;
+    border-color: $c-secondary-color;
+  }
+}
+
+@mixin transition-all {
+  transition: all 0.4s ease-out;
 }
 
 // media query mixins
-@mixin mq-AboveDesktop{
-    @media screen and (min-width: 1600px) {
-        @content;
-    }
+@mixin mq-AboveDesktop {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
 }
-@mixin  mq-Desktop {
-    @media screen and (min-width: 1171px){
-        @content;
-    }
+@mixin mq-Desktop {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }
-@mixin  mq-AboveTablet {
-    @media screen and (min-width: 769px) and (max-width: 1170px){
-        @content;
-    }
+@mixin mq-AboveTablet {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
-@mixin  mq-Tablet {
-    @media screen and (max-width: 768px){
-        @content;
-    }
+@mixin mq-Tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
-@mixin  mq-Mobile {
-    @media screen and (max-width: 500px){
-        @content;
-    }
+@mixin mq-Mobile {
+  @media screen and (max-width: 650px) {
+    @content;
+  }
 }
-
-

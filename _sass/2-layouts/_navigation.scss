@@ -1,88 +1,87 @@
+// menu overlay
 
- // menu overlay
+.menu {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  pointer-events: all;
+  background-color: darken($c-light-black, 3);
+  &.show {
+    visibility: visible;
+  }
 
- .menu{
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    opacity: 0.9;
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
+  &-branding,
+  &-nav {
     pointer-events: all;
-    background-color: darken($c-light-black,3);
-     &.show{
-         visibility: visible; ;
-     }
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    height: 100vh;
+    max-height: fit-content;
+    overflow: hidden;
+  }
 
-     &-branding, &-nav{
-        pointer-events: all;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        height: 100vh;
-        max-height: fit-content;
-        overflow: hidden;
-     }
+  &-nav {
+    transform: translate3d(-100%, 0, 0);
+    @include transition-all;
+    &.show {
+      //  slide from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  // branding side
+  &-branding {
+    transform: translate3d(-100%, 0, 0);
+    @include transition-all;
+    &.show {
+      // slide from bottom
+      transform: translate3d(0, 0, 0);
+    }
+    .portrait {
+      .portrait-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .menu-nav-item {
+    @include transition-all;
+    transform: translate3d(-100%, 0, 0);
+    margin-top: $gutter;
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+    &:last-child {
+      .nav-link {
+        padding-bottom: 0;
+      }
+    }
+    &.current > a {
+      color: $c-secondary-color;
+    }
+  }
+  .nav-link {
+    @include font-m;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    color: $c-creme-white;
+    transition: color 0.4s ease-out;
+    &:hover {
+      color: $c-secondary-color;
+    }
+  }
+}
 
-     &-nav{
-         transform: translate3d(-100%, 0, 0);
-        @include transition-all;
-         &.show{
-            //  slide from top
-             transform: translate3d(0,0,0);
-         }
-     }
-     // branding side
-     &-branding{
-         transform: translate3d(-100%, 0, 0);
-         @include transition-all;
-         &.show{
-            // slide from bottom
-            transform: translate3d(0,0,0);
-        }
-        .portrait{
-            .portrait-img{
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-            }
-        }
-     }
-     .menu-nav-item{
-        @include transition-all;
-        transform: translate3d(-100%, 0 , 0);
-        margin-top: $gutter;
-         &.show{
-             transform: translate3d(0,0,0);
-         }
-         &:last-child{
-            .nav-link{
-                padding-bottom: 0;
-            }
-         }
-         &.current > a{
-             color: $c-secondary-color;
-         }
-
-     }
-     .nav-link{
-         @include font-m;
-         display: inline-block;
-         position: relative;
-         text-transform: uppercase;
-         color: $c-creme-white;
-         transition: color .4s ease-out;
-         &:hover{
-             color: $c-secondary-color;
-         }
-     }
- }
-
- @for $x from 1 through 4{
-    .menu-nav-item:nth-child(#{$x}){
-         transition-delay: $x * 0.1s;
-     }
- } 
+@for $x from 1 through 4 {
+  .menu-nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}

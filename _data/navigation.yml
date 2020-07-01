@@ -1,0 +1,12 @@
+links:
+  - title: Home
+    url: /
+  - title: Portfolio
+    url: /comingsoon/
+    # url: /portfolio/
+  - title: Blogs
+    url: /comingsoon/
+    # url: /blog/
+  - title: Contact
+    url: /404/
+    # url: /contact/

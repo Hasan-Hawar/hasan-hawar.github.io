@@ -1,381 +1,364 @@
-:root{
-    --pgbar-length: 100%;
-    --percent: 1;
-    --MATH-PI: 3.1415px;
+:root {
+  --pgbar-length: 100%;
+  --percent: 1;
+  --MATH-PI: 3.1415px;
 }
 
 .home {
-   &-title {
-        margin-bottom: $gutter;
-    }
-    &-section {
-        margin-bottom: $gutter * 4;     
-        height: 60vh;
-    }
-    &-container{
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        padding: $gutter;
-    }
+  &-title {
+    margin-bottom: $gutter;
+  }
+  &-section {
+    margin-bottom: $gutter;
+    height: 40vh;
+  }
+  &-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: $gutter;
+  }
 }
 
 .myData {
-    @include font-s;
-    min-width: fit-content;
-    margin-top: auto;
-    .describtion {
-        margin-bottom: $gutter;
-    }
-    .my-cv {
-        border: 1px solid #f4f4f4;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: $gutter-small;
-        padding-top: $gutter-small;
-        transition: all .4s ease-out;
-        cursor: pointer;
-        border-radius: 30px;
-        font-weight: 300;
-        cursor: pointer;
-        text-align: center;
-        &:hover {
-            a {
-                color: $c-secondary-color;
-            }
-            background-color: $c-light-black;
-            border-color: $c-secondary-color;
-        }
-    }
+  @include font-s;
+  min-width: fit-content;
+  margin-top: auto;
+  .describtion {
+    margin-bottom: $gutter;
+  }
 }
-
+.my-cv {
+  @include primary-button;
+}
 .img-portrait {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .main-img {
-    width: 80%;
-    border-radius: 50%;
+  width: 80%;
+  border-radius: 50%;
 }
 
 .brand-heading {
-    @include font-xl;
-    margin-bottom: $gutter;
-    color: $c-creme-white;
+  @include font-xl;
+  margin-bottom: $gutter;
+  color: $c-creme-white;
 }
 
 .brand-describ {
-    @include font-s;  
-    color: $c-creme-white;
+  @include font-s;
+  color: $c-creme-white;
 }
 
 .icons {
-    margin-top: $gutter;
+  margin-top: $gutter;
 }
 
 .social-icons {
-    i {
-        padding-right: $gutter;
-        &:hover {
-            transition: all .4s ease-out;
-            color: $c-secondary-color;
-        }
+  i {
+    padding-right: $gutter;
+    &:hover {
+      transition: all 0.4s ease-out;
+      color: $c-secondary-color;
     }
+  }
 }
 
 .secondary-text {
-    color: $c-secondary-color;
+  color: $c-secondary-color;
 }
 
 .under-construction {
-    margin: 50px;
-    @include font-m;
-    color: $c-secondary-color;
-    text-align: center;
-    text-decoration: underline;
+  margin: 50px;
+  @include font-m;
+  color: $c-secondary-color;
+  text-align: center;
+  text-decoration: underline;
 }
 
-// about me section styling 
+// about me section styling
 .aboutme {
-    margin-bottom: $gutter * 4;     
-    text-align: center;
-    &-container {
-        padding-top: $gutter;
-        padding-bottom: $gutter;
+  margin-bottom: $gutter * 4;
+  text-align: center;
+  &-container {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+  }
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: $gutter-small;
+    box-shadow: 0 0px 32px -5px rgba($c-secondary-color, $alpha: 0.8);
+    background: $c-creme-white;
+    border-radius: 15px;
+  }
+  &-about {
+    text-align: left;
+    margin-right: $gutter-small;
+    min-width: 50%;
+  }
+  &-infos {
+    width: 50%;
+    min-width: fit-content;
+  }
+  &-header {
+    position: relative;
+    padding-bottom: $gutter * 1.5;
+    padding-top: $gutter-small;
+    text-align: left;
+    white-space: nowrap;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 2px;
+      background-color: $c-light-black;
+      bottom: 20%;
+      transform: translate(0, 0);
     }
-    &-inner {
-        display: flex;
-        justify-content: space-between;
-        padding: $gutter-small;
-        box-shadow: 0 0px 32px -5px rgba(135, 32, 24, 0.8);
-        background: $c-creme-white;
-        border-radius: 15px;
+  }
+  &-content {
+    @include font-xs;
+    padding-bottom: $gutter-small;
+    &.table-info {
+      display: flex;
+      padding-right: $gutter;
     }
-    &-about{
-        text-align: left;
-        margin-right: $gutter-small;
-        min-width: 50%;
+  }
+  &-list {
+    min-width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    li {
+      padding-bottom: $gutter-small;
+      color: $c-light-black;
     }
-    &-infos{
-        width: 50%;
-        min-width: fit-content;
-    }
-    &-header {
-        position: relative;
-        padding-bottom: $gutter * 1.5;
-        padding-top: $gutter-small;
-        text-align: left;
-        white-space: nowrap;
-        &:after {
-            content: '';
-            position: absolute;
-            width: 65px;
-            height: 2px;
-            background-color: $c-light-black;
-            bottom: 20%;
-            transform: translate(0, 0);
-        }
-    }
-    &-content {
-        @include font-xs;
-        padding-bottom: $gutter-small;
-        &.table-info{
-            display: flex;
-            padding-right: $gutter;
-            
-        }
-    }
-    &-list{
-        min-width: 40%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        li{
-            padding-bottom: $gutter-small;
-            color: $c-light-black;
-        }
-    }
-    &-title, &-text{
-        color: $c-light-black;
-    }
-    &-title{
-        @include font-m;
-    }
-   
+  }
+  &-title,
+  &-text {
+    color: $c-light-black;
+  }
+  &-title {
+    @include font-m;
+  }
 }
-
 
 /* Detail section overall setting*/
 .detail {
-    &:hover > .detail-section:not(:hover) {
-        opacity: 0.5;
-    }
-    &-section {
-        @include transition-all;
-        margin-bottom: $gutter;
-    }
-    &-section:not(:last-of-type) {
-        padding-bottom: $gutter-small * 1.5;
-    }
-    &-title {
-        display: flex;
-        align-items: center;
-    }
-    &-content {
-        padding: $gutter-small * 1.5;
-        padding-left: 0;
-    } 
-    &-content {
-        padding-left: calc(1.5rem + 10px);
-    }
+  &:hover > .detail-section:not(:hover) {
+    opacity: 0.5;
+  }
+  &-section {
+    @include transition-all;
+    margin-bottom: $gutter;
+  }
+  &-section:not(:last-of-type) {
+    padding-bottom: $gutter-small * 1.5;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+  }
+  &-content {
+    padding: $gutter-small * 1.5;
+    padding-left: 0;
+  }
+  &-content {
+    padding-left: calc(1.5rem + 10px);
+  }
 }
 .title-icon + span {
-    @include font-s;
-    @include transition-all;
+  @include font-s;
+  @include transition-all;
 }
 .title-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: $gutter-small;
-    margin-right: $gutter-small;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: $c-secondary-color;
-    border-radius: 50%;
-    @include transition-all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $gutter-small;
+  margin-right: $gutter-small;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $c-secondary-color;
+  border-radius: 50%;
+  @include transition-all;
 }
 .title-icon i {
-    color: $c-creme-white;
-    text-align: center;
+  color: $c-creme-white;
+  text-align: center;
 }
 .detail-section:hover .title-icon {
-    transform: scale(1.5);
-    margin-right: $gutter-small * 1.2;
+  transform: scale(1.5);
+  margin-right: $gutter-small * 1.2;
 }
 .detail-section:hover .title-icon + span {
-    letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 }
 
 /* time line block in education section */
 .timeline-block {
-    position: relative;
-    background-color: rgba(#202020,0.6);
-    padding: $gutter;
-    border-radius: 15px;
+  position: relative;
+  background-color: darken($c-light-black, 1);
+  padding: $gutter;
+  border-radius: 15px;
 }
 .timeline-block:not(:last-of-type) {
-    margin-bottom: $gutter-small;    
+  margin-bottom: $gutter-small;
 }
 .timeline-block h1 {
-    margin: 5px 0;
-    transition: all 0.3s;
+  margin: 5px 0;
+  transition: all 0.3s;
 }
 .timeline-block p {
-    opacity: 0.8;
-    margin: 5px 0;
+  opacity: 0.8;
+  margin: 5px 0;
 }
 .timeline-block time {
-    opacity: 0.8;
-    color: $c-creme-white;
+  opacity: 0.8;
+  color: $c-creme-white;
 }
 .timeline-block::before {
-    position: absolute;
-    content: '';
-    width: 15px;
-    height: 15px;
-    background-color: $c-creme-white;
-    border: 3px solid $c-secondary-color;
-    border-radius: 50%;
-    left: -25px;
-    top: -5px;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: $c-creme-white;
+  border: 3px solid $c-secondary-color;
+  border-radius: 50%;
+  left: -25px;
+  top: -5px;
 }
 .timeline-block::after {
-    position: absolute;
-    content: '';
-    width: 3px;
-    height: 100%;
-    background-color: $c-secondary-color;
-    left: -$gutter-small;
-    top: 13px;
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: $c-secondary-color;
+  left: -$gutter-small;
+  top: 13px;
 }
 .timeline-block:hover h1 {
-    color: $c-secondary-color;
+  color: $c-secondary-color;
 }
 .timeline-block:hover::before {
-    animation: circle 1.2s infinite;
+  animation: circle 1.2s infinite;
 }
 
 /* Programming skills section */
-.pg-list, .tool-list, .favor-list {
-    padding: 0;
-    list-style: none;
+.pg-list,
+.tool-list,
+.favor-list {
+  padding: 0;
+  list-style: none;
 }
-.pg-list > li { 
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
+.pg-list > li {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
 }
 .sb-skeleton {
-    position: relative;
-    flex: 1 0 auto;
-    height: 2px;
-    background-color: #9a9a9a;
+  position: relative;
+  flex: 1 0 auto;
+  height: 2px;
+  background-color: #9a9a9a;
 }
 .pg-list > li > span {
-    flex: 0 0 100px;
+  flex: 0 0 100px;
 }
 .sb-skeleton > .skillbar {
-    position: absolute;
-    left: 0;
-    top: -1px;
-    width: var(--pgbar-length);
-    height: 4px;
-    background-color:$c-secondary-color;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: var(--pgbar-length);
+  height: 4px;
+  background-color: $c-secondary-color;
 }
 .tool-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .tool-list > li {
-    position: relative;
-    text-align: center;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
+  position: relative;
+  text-align: center;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 .tool-list > li > svg {
-    fill: transparent;
-    width: 95%;
-    transform: rotate(-90deg);
+  fill: transparent;
+  width: 95%;
+  transform: rotate(-90deg);
 }
 .tool-list > li > svg > circle {
-    stroke-width: 1px;
-    stroke: #cdcdcd;
+  stroke-width: 1px;
+  stroke: #cdcdcd;
 }
 .tool-list > li > svg > circle.cbar {
-    stroke-width: 3px;
-    stroke: $c-secondary-color;
-    stroke-linecap: round;
-    stroke-dashoffset: 0;
-    stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
-    transition: all 0.8s;
-    transition-timing-function: cubic-bezier(.64,.51,.16,.86);
+  stroke-width: 3px;
+  stroke: $c-secondary-color;
+  stroke-linecap: round;
+  stroke-dashoffset: 0;
+  stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+  transition: all 0.8s;
+  transition-timing-function: cubic-bezier(0.64, 0.51, 0.16, 0.86);
 }
 .tool-list > li:hover > svg > circle.cbar {
-    stroke-width: 4px;
-    stroke: $c-light-secondary-color;
-    stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+  stroke-width: 4px;
+  stroke: $c-light-secondary-color;
+  stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
 }
 .tool-list > li > .tl-name,
 .tool-list > li > .tl-exp {
-    @include font-xs;
-    position: absolute;
-    color:  $c-creme-white;
+  @include font-xs;
+  position: absolute;
+  color: $c-creme-white;
 }
 .tool-list > li > .tl-name {
-    top: 40%;
+  top: 40%;
 }
-.tool-list > li > .tl-exp { 
-    top: calc(50% + #{$gutter-small});
+.tool-list > li > .tl-exp {
+  top: calc(50% + #{$gutter-small});
 }
 /* Interests Section */
 .outer-frame {
-    border: 1px solid #9a9a9a;
-    border-radius: 5px;
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
 }
 .favor-list {
-    padding-top: $gutter-small;
-    padding-bottom: $gutter-small;
-    display: flex;
-   justify-content: space-around;
+  padding-top: $gutter-small;
+  padding-bottom: $gutter-small;
+  display: flex;
+  justify-content: space-around;
 }
 .favor-list > li {
-    @include transition-all;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  @include transition-all;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .favor-list > li > i {
-    @include font-s;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
+  @include font-s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
 }
 .favor-list > li:hover {
-    transform: scale(1.2);
-    i, span{
+  transform: scale(1.2);
+  i,
+  span {
     color: $c-light-secondary-color;
-    }
+  }
 }
 .favor-list > li > span {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 @keyframes circle {
@@ -415,4 +398,3 @@
 //         flex: 0 0 33.33%;
 //     }
 // }
-
